@@ -1,0 +1,7 @@
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\CheckOverlap\bin\Debug\CheckOverlap.exe.config
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\CheckOverlap\bin\Debug\CheckOverlap.exe
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\CheckOverlap\bin\Debug\CheckOverlap.pdb
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\CheckOverlap\obj\Debug\CheckOverlap.csproj.AssemblyReference.cache
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\CheckOverlap\obj\Debug\CheckOverlap.csproj.CoreCompileInputs.cache
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\CheckOverlap\obj\Debug\CheckOverlap.exe
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\CheckOverlap\obj\Debug\CheckOverlap.pdb

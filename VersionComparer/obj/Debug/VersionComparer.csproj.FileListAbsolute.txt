@@ -1,0 +1,7 @@
+C:\Users\jhoha\source\repos\LRUCache\VersionComparer\bin\Debug\VersionComparer.exe.config
+C:\Users\jhoha\source\repos\LRUCache\VersionComparer\bin\Debug\VersionComparer.exe
+C:\Users\jhoha\source\repos\LRUCache\VersionComparer\bin\Debug\VersionComparer.pdb
+C:\Users\jhoha\source\repos\LRUCache\VersionComparer\obj\Debug\VersionComparer.csproj.AssemblyReference.cache
+C:\Users\jhoha\source\repos\LRUCache\VersionComparer\obj\Debug\VersionComparer.csproj.CoreCompileInputs.cache
+C:\Users\jhoha\source\repos\LRUCache\VersionComparer\obj\Debug\VersionComparer.exe
+C:\Users\jhoha\source\repos\LRUCache\VersionComparer\obj\Debug\VersionComparer.pdb
