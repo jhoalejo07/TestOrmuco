@@ -1,13 +1,13 @@
-This package contains three projects prepared in C# for the technical test; each project includes each of the required questions. Please take all the files and folders from the repository and take them to your local station.
+This package contains three projects packaged in a C# solution created for this technical test. Please take all the files and folders from the repository and download them into a local folder. Following these steps:
 
-Create a folder and copy all content there.
+1. Create a folder on your computer and copy all the repository's content there.
 
-Open Microsoft Visual Studio
+2. Open Microsoft Visual Studio
 
-Open a project or solution.
+3. Choose the option: Open a project or solution.
 
-Browse to the local folder where I copied the repository files.
+4. Browse to the local folder (step 1) where you copied the repository files.
 
-And select the file TechnicalTest_Ormuco.sln
+5. Select the file TechnicalTest_Ormuco.sln
 
-Please open it and inside, there are three projects that correspond to each of the questions. Run any that you want to see.
+When you open the solution, you will find three projects, each of which corresponds to one question. Please execute whatever you want to check the result.
