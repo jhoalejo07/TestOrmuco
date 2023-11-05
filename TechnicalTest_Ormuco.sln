@@ -3,16 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LRUCache", "LRUCache\LRUCache.csproj", "{9482D1F6-80E5-4C70-8416-49C224821D1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q3_LRUCache", "LRUCache\Q3_LRUCache.csproj", "{9482D1F6-80E5-4C70-8416-49C224821D1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VersionComparer", "VersionComparer\VersionComparer.csproj", "{9A00F200-E781-46E6-A33A-3128C58CF57E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q2_VersionComparer", "VersionComparer\Q2_VersionComparer.csproj", "{9A00F200-E781-46E6-A33A-3128C58CF57E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{0B3ED699-18B1-40F9-9E71-D4506061D0CC}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckOverlap", "CheckOverlap\CheckOverlap.csproj", "{2951C15B-71BC-44A8-AFFD-FE3E407CFAF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q1_CheckOverlap", "CheckOverlap\Q1_CheckOverlap.csproj", "{2951C15B-71BC-44A8-AFFD-FE3E407CFAF4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest_TechTestOrmuco", "UnitTest_TechTestOrmuco\UnitTest_TechTestOrmuco.csproj", "{6E9BAD39-7986-4B14-B546-FD7167D925D2}"
 EndProject

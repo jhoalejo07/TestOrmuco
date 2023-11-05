@@ -1,9 +1,3 @@
-C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\UnitTest_TechTestOrmuco\bin\Debug\es\Microsoft.TestPlatform.AdapterUtilities.resources.dll
-C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\UnitTest_TechTestOrmuco\bin\Debug\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\UnitTest_TechTestOrmuco\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\UnitTest_TechTestOrmuco\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
-C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\UnitTest_TechTestOrmuco\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\UnitTest_TechTestOrmuco\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\UnitTest_TechTestOrmuco\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\UnitTest_TechTestOrmuco\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\UnitTest_TechTestOrmuco\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll

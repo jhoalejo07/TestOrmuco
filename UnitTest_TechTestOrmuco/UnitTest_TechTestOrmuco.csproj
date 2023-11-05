@@ -49,24 +49,24 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="UnitTest_TechnicalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CheckOverlap\CheckOverlap.csproj">
+    <ProjectReference Include="..\CheckOverlap\Q1_CheckOverlap.csproj">
       <Project>{2951c15b-71bc-44a8-affd-fe3e407cfaf4}</Project>
-      <Name>CheckOverlap</Name>
+      <Name>Q1_CheckOverlap</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LRUCache\LRUCache.csproj">
+    <ProjectReference Include="..\LRUCache\Q3_LRUCache.csproj">
       <Project>{9482d1f6-80e5-4c70-8416-49c224821d1f}</Project>
-      <Name>LRUCache</Name>
+      <Name>Q3_LRUCache</Name>
     </ProjectReference>
-    <ProjectReference Include="..\VersionComparer\VersionComparer.csproj">
+    <ProjectReference Include="..\VersionComparer\Q2_VersionComparer.csproj">
       <Project>{9a00f200-e781-46e6-a33a-3128c58cf57e}</Project>
-      <Name>VersionComparer</Name>
+      <Name>Q2_VersionComparer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
