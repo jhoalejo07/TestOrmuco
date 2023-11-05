@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckOverlap", "CheckOverlap\CheckOverlap.csproj", "{2951C15B-71BC-44A8-AFFD-FE3E407CFAF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest_TechTestOrmuco", "UnitTest_TechTestOrmuco\UnitTest_TechTestOrmuco.csproj", "{6E9BAD39-7986-4B14-B546-FD7167D925D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{2951C15B-71BC-44A8-AFFD-FE3E407CFAF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2951C15B-71BC-44A8-AFFD-FE3E407CFAF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2951C15B-71BC-44A8-AFFD-FE3E407CFAF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9BAD39-7986-4B14-B546-FD7167D925D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9BAD39-7986-4B14-B546-FD7167D925D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9BAD39-7986-4B14-B546-FD7167D925D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9BAD39-7986-4B14-B546-FD7167D925D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
