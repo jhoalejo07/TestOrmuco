@@ -38,10 +38,11 @@ namespace VersionComparer
                 // Determining which version has the maximum length
                 int maxLength = vers1.Length > vers2.Length ? vers1.Length : vers2.Length;
 
-                //    //creating a cycle for comparing the two arrays, position by position converted to number to see which is bigger
-                for (int i = 0; i < maxLength; i++)
+                //Creating a cycle for comparing the two arrays, position by position converted to number, to see which is bigger
+                    for (int i = 0; i < maxLength; i++)
                 {
-                    int part1 = (i < vers1.Length) ? int.Parse(vers1[i]) : 0; // convert every item to a number, validating if the iteration number is bigger than the array´s length return 0
+                    // It converts every item to a number, validating if the iteration number is bigger than the array´s length to return 0.
+                    int part1 = (i < vers1.Length) ? int.Parse(vers1[i]) : 0; 
                     int part2 = (i < vers2.Length) ? int.Parse(vers2[i]) : 0;
                     if (part1 > part2)
                     {

@@ -1,0 +1,7 @@
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\VersionComparer\bin\Debug\VersionComparer.exe.config
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\VersionComparer\bin\Debug\VersionComparer.exe
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\VersionComparer\bin\Debug\VersionComparer.pdb
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\VersionComparer\obj\Debug\Q2_VersionComparer.csproj.AssemblyReference.cache
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\VersionComparer\obj\Debug\Q2_VersionComparer.csproj.CoreCompileInputs.cache
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\VersionComparer\obj\Debug\VersionComparer.exe
+C:\Users\jhoha\source\repos\TechnicalTest_Ormuco\VersionComparer\obj\Debug\VersionComparer.pdb

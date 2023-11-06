@@ -17,6 +17,12 @@ namespace LRUCache
 
     /**************************************************************************************************************************
     * Q3. Geo Distributed LRU (Least Recently Used) cache with time expiration.
+    * 
+    * To be honest, at this point, I developed this solution from my point of view as a beginner. My knowledge as a programmer could be 
+    * improved in dealing with network failures or crashes, real-time replication, and consistency across regions. For that reason, 
+    * I came up with a solution pretty simple with an example of the LRU (Least Recently Used) concept of adding time expiration in a 
+    * standalone environment. I want to put it under your consideration.
+    * 
     ***************************************************************************************************************************/
 
 
@@ -24,7 +30,7 @@ namespace LRUCache
     {
         private List<int> itemsList;// list for items
         private HashSet<int> idList;  // List  for identifiers
-        private Dictionary<int, DateTime> ExpirationList; // Dictionaty to store datatime of each item
+        private Dictionary<int, DateTime> ExpirationList; // Dictionary to store the DateTime of each item
         private int CACHE_SIZE;// Maximun number the items in the cache
 
         public LRU(int capacity)
@@ -41,8 +47,9 @@ namespace LRUCache
 
             if (!idList.Contains(page)) // check if the item exists
             {
-                if (itemsList.Count > CACHE_SIZE-1) // if reaches the maximun items then the last position it is removed
+                if (itemsList.Count > CACHE_SIZE-1) // if the number is not in the list, check it reaches the maximun items 
                 {
+                    //if it reaches the maximum, the last item is removed
                     int last = itemsList[itemsList.Count - 1];
                     itemsList.RemoveAt(itemsList.Count - 1);
                     idList.Remove(last);
@@ -53,8 +60,8 @@ namespace LRUCache
             {
                 itemsList.Remove(page); // if the item exists then it is removed 
             }
-
-            itemsList.Insert(0, page); // the item is insert in the first position of the list od contents
+            
+            itemsList.Insert(0, page); // the new number it add it on the top 
             idList.Add(page); //it is associate with and identifier
             ExpirationList[page] = currentTime; // it is store its datatime
         }
