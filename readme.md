@@ -1,7 +1,8 @@
-This package contains four projects in a C# solution created for this technical test. Following these steps:
+This package contains four projects in a C# solution created for this technical test. Follow these steps:
 
-1. Create a folder on your computer, download the ZIP from the repository on it and unzip it.
-[Model] (images/download.jpg)
+1. Create a folder on your computer, download the ZIP from the repository on it, and unzip it.
+![image](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/7460fde6-1dfb-4787-8cb0-f9abed9ee287)
+
 
 
 2. Open Microsoft Visual Studio
@@ -9,7 +10,7 @@ This package contains four projects in a C# solution created for this technical 
 3. Choose the option: Open a project or solution.
 
 
-4. Browse the local folder (step 1), where you downloaded and unzipped the project´s files.
+4. Browse the local folder (step 1), where you downloaded and unzipped the projectÂ´s files.
 
 
 5. Select the file TechnicalTest_Ormuco.sln
