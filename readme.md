@@ -1,6 +1,7 @@
 This package contains four projects in a C# solution created for this technical test. Following these steps:
 
 1. Create a folder on your computer, download the ZIP from the repository on it and unzip it.
+[Model] (images/download.jpg)
 
 
 2. Open Microsoft Visual Studio
