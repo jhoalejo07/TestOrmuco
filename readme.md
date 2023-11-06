@@ -13,14 +13,15 @@ This package contains four projects in a C# solution created for this technical 
 
 5. Browse the local folder (step 1) where you downloaded and unzipped the project´s files.
 
-
 6. Select the file TechnicalTest_Ormuco.sln
 ![SelectProjectOpen](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/4d9ab29c-cdb1-4947-a68f-e9df049097df)
 
 When you open the solution in the Solution Explorer, you will find three projects:
+
 ![SolutionProjects](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/7a9c286c-eeb6-4fa7-8b2b-5abbcb51a547)
 
 Each of them corresponds to one question on the technical test, and there is a project extra called UnitTest_TechTestOrmuco that contains the unit tests of every exercise.
+
 ![SolutionUnitTest](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/926396cd-895c-49c5-96f8-78fb672236c2)
 
 7. To execute whatever project, go to Solution Explorer, select the main class file, and double-click on it to display it on the main screen.
@@ -36,5 +37,6 @@ Each of them corresponds to one question on the technical test, and there is a p
 ![ExecuteTest](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/04176363-62a2-4071-97d4-966c51389de7)
 
 11. On the test Explorer, you have access to 25 test cases created for all the solution. You can run them individually or by project. You should press right-click on what you want to execute.
+    
 ![TestExplorerExecution](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/231922ae-7d99-4c46-a8c0-f4d86bcbb8f7)
 
