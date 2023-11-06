@@ -1,6 +1,6 @@
-This package contains four projects in a C# solution created for this technical test. Follow these steps:
+This package contains four projects in a C# solution created for this technical test. To execute the solution, follow these steps:
 
-1. Create a folder on your computer, download the ZIP from the repository in this new folder, and unzip it.
+1. Create a folder on your computer, download the ZIP from this repository in this new folder, and unzip it.
 ![image](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/7460fde6-1dfb-4787-8cb0-f9abed9ee287)
 
 
@@ -11,12 +11,12 @@ This package contains four projects in a C# solution created for this technical 
 ![OpenProject](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/72a51258-6191-440f-926f-740782a8937c)
 
 
-5. Browse the local folder (step 1) where you downloaded and unzipped the project´s files.
+5. Browse the local folder created in step 1, where you downloaded and unzipped the project´s files.
 
 6. Select the file TechnicalTest_Ormuco.sln
 ![SelectProjectOpen](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/4d9ab29c-cdb1-4947-a68f-e9df049097df)
 
-When you open the solution in the Solution Explorer, you will find three projects:
+When you open the file TechnicalTest_Ormuco.sln in the Solution Explorer, you will find three projects:
 
 ![SolutionProjects](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/7a9c286c-eeb6-4fa7-8b2b-5abbcb51a547)
 
@@ -36,7 +36,7 @@ Each of them corresponds to one question on the technical test, and there is a p
 10. Go to the Test menu and select Run All Tests, or open the Test Explorer.
 ![ExecuteTest](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/04176363-62a2-4071-97d4-966c51389de7)
 
-11. On the test Explorer, you have access to 25 test cases created for all the solution. You can run them individually or by project. You should press right-click on what you want to execute.
+11. On the test Explorer, you have access to 25 test cases created for the solution. You can run them individually or by project. You should press right-click on what you want to execute.
     
 ![TestExplorerExecution](https://github.com/jhoalejo07/TestOrmuco/assets/149636832/231922ae-7d99-4c46-a8c0-f4d86bcbb8f7)
 
