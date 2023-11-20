@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading;
 
 
 /******************************************************************
@@ -31,21 +31,27 @@ namespace LRUCache
         private List<int> itemsList;// list for items
         private HashSet<int> idList;  // List  for identifiers
         private Dictionary<int, DateTime> ExpirationList; // Dictionary to store the DateTime of each item
-        private int CACHE_SIZE;// Maximun number the items in the cache
+        private int CACHE_SIZE;// constant for Maximun number the items in the cache
+        private Timer expirationTimer; // add a timer to trigger the ExpireCacheTimerCallback method periodically (NEW)
+        private int EXPIRATION_TIME; // constant to setup the time expiration (NEW)
 
-        public LRU(int capacity)
+        public LRU(int capacity, int experation)
         {
             itemsList = new List<int>(); 
             idList = new HashSet<int>(); 
             ExpirationList = new Dictionary<int, DateTime>(); 
-            CACHE_SIZE = capacity; 
+            CACHE_SIZE = capacity;
+            EXPIRATION_TIME = experation;
+
+            // Set up a timer to trigger cache expiration check every EXPIRATION_TIME seconds (parameter) (NEW)
+            expirationTimer = new Timer(ExpireCacheTimerCallback, null, TimeSpan.Zero, TimeSpan.FromSeconds(EXPIRATION_TIME));
         }
 
         public void AddItem(int page)
         {
             DateTime currentTime = DateTime.Now;// takes currrently timestamp to associate to the new item
 
-            if (!idList.Contains(page)) // check if the item exists
+            if (!idList.Contains(page)) // check if the item doesn´t exist
             {
                 if (itemsList.Count > CACHE_SIZE-1) // if the number is not in the list, check it reaches the maximun items 
                 {
@@ -66,6 +72,16 @@ namespace LRUCache
             ExpirationList[page] = currentTime; // it is store its datatime
         }
 
+
+        private void ExpireCacheTimerCallback(object state)
+        {
+            // Expire cache items 
+            ExpireCache(TimeSpan.FromSeconds(EXPIRATION_TIME)); // Adjust the expiration time as needed
+            Console.WriteLine("Items after cache expiration");
+            Display();
+        }
+
+
         // Remove expired items from the cache
         public void ExpireCache(TimeSpan expirationTime) 
         {
@@ -80,7 +96,7 @@ namespace LRUCache
                 }
             }
 
-            foreach (var itemToRemove in itemsToRemove)  // dete from the LRU's list the objects that have expiration time
+            foreach (var itemToRemove in itemsToRemove)  // delete from the LRU's list the objects that have expiration time
             {
                 idList.Remove(itemToRemove);
                 itemsList.Remove(itemToRemove);
@@ -105,15 +121,14 @@ namespace LRUCache
 
         static void Main(string[] args)
         {
-            LRU cache = new LRU(3); // instance the class with a capacity of 4 items
+            LRU cache = new LRU(3,1); // instance the class with a capacity of 3 items with 1 second of expiration time
             cache.AddItem(1); // enter the first item
             cache.Display(); // display the list
             cache.AddItem(2);
             cache.Display();
             cache.AddItem(3);
             cache.Display();
-            Console.WriteLine("A existed value was entered");
-            cache.AddItem(1); // enter an existed value in the list that it doesn't expire
+            cache.AddItem(1); // enter an existing value in the list that it doesn't expire
             cache.Display();
             cache.AddItem(4);
             cache.Display();
@@ -122,13 +137,12 @@ namespace LRUCache
             cache.AddItem(1);
             cache.Display();
 
-            System.Threading.Thread.Sleep(6000); // waiting for 6 seconds to let expire the items
-            // Expire cache items 
-            cache.ExpireCache(TimeSpan.FromSeconds(6)); // if setup <= 6 the items are gone, but if I put > than 6 seconds the items remaind
-
-            // Display the cache after expiration
-            Console.WriteLine("Items after cache expiration");
+            System.Threading.Thread.Sleep(2000); // waiting for 2 seconds to let expire the items
+            cache.AddItem(5); // add new items to see them expire
             cache.Display();
+            cache.AddItem(1);
+            cache.Display();
+
             Console.ReadLine();
         }
     }

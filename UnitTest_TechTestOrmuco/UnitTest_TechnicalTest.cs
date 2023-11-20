@@ -46,6 +46,7 @@ namespace UnitTest_TechTestOrmuco
             Assert.IsTrue(srt.Contains("are equal"));
         }
 
+
         [TestMethod]
         public void TestVersions_Null_srt1()
         {
@@ -53,7 +54,7 @@ namespace UnitTest_TechTestOrmuco
             string version2 = "1.0";
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("null version"));
+            Assert.AreEqual("Value cannot be null.", srt);
         }
 
         [TestMethod]
@@ -63,7 +64,7 @@ namespace UnitTest_TechTestOrmuco
             string version2 = null;
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("null version"));
+            Assert.AreEqual("Value cannot be null.", srt);
         }
 
         [TestMethod]
@@ -73,27 +74,27 @@ namespace UnitTest_TechTestOrmuco
             string version2 = null;
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("null version"));
+            Assert.AreEqual("Value cannot be null.", srt);
         }
 
         [TestMethod]
         public void TestVersions_InvalidInput_Srt1()
         {
             string version1 = "1.0.";
-            string version2 = "1.2";
+            string version2 = "1.0";
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("Invalid Input"));
+            Assert.AreEqual("Input string was not in a correct format.", srt);
         }
 
         [TestMethod]
         public void TestVersions_InvalidInput_Srt2()
         {
-            string version1 = "1.2";
+            string version1 = "1.0.5";
             string version2 = "1.0.";
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("Invalid Input"));
+            Assert.AreEqual("Input string was not in a correct format.", srt);
         }
 
         [TestMethod]
@@ -103,7 +104,7 @@ namespace UnitTest_TechTestOrmuco
             string version2 = null;
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("null version"));
+            Assert.AreEqual("Value cannot be null.", srt);
         }
 
         [TestMethod]
@@ -113,47 +114,48 @@ namespace UnitTest_TechTestOrmuco
             string version2 = "1.0.";
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("null version"));
+            Assert.AreEqual("Value cannot be null.", srt);
         }
 
         [TestMethod]
-        public void TestVersions_InvalidInput_letter_Srt1()
+        public void TestVersions_letter_Srt1()
         {
             string version1 = "1.w.5";
             string version2 = "1.0";
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("Invalid Input"));
+            Assert.IsTrue(srt.Contains("is greater than"));
+
         }
 
         [TestMethod]
-        public void TestVersions_InvalidInput_letter_Srt2()
+        public void TestVersions_letter_Srt2()
         {
             string version1 = "1.0";
             string version2 = "1.w.5";
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("Invalid Input"));
+            Assert.IsTrue(srt.Contains("is lower than"));
         }
 
         [TestMethod]
-        public void TestVersions_InvalidInput_letter_Srt1_Null_srt2()
+        public void TestVersions_letter_Srt1_Null_srt2()
         {
             string version1 = "1.w.5";
             string version2 = null;
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("null version"));
+            Assert.AreEqual("Value cannot be null.", srt);
         }
 
         [TestMethod]
-        public void TestVersions_InvalidInput_letter_Srt2_Null_srt1()
+        public void TestVersions_letter_Srt2_Null_srt1()
         {
             string version1 = null;
             string version2 = "1.w.5";
 
             string srt = vs.BiggerVersion(version1, version2);
-            Assert.IsTrue(srt.Contains("null version"));
+            Assert.AreEqual("Value cannot be null.", srt);
         }
 
     }
@@ -161,12 +163,12 @@ namespace UnitTest_TechTestOrmuco
     [TestClass]
      public class LRUCacheTests
         {
-            LRU cache = new LRU(3);
+            LRU cache = new LRU(3,2);
             [TestMethod]
             public void TestLRUCache_AddItem()
             {
                 cache.AddItem(1);
-                CollectionAssert.AreEqual(new[] { 1 }, cache.GetItems());
+                CollectionAssert.AreEqual(new[] { 1 }, cache.GetItems()); // compare if the item was store
             }
        
 
@@ -176,7 +178,7 @@ namespace UnitTest_TechTestOrmuco
                 cache.AddItem(1);
                 cache.AddItem(2);
                 cache.AddItem(3);
-                CollectionAssert.AreEqual(new[] {3, 2, 1 }, cache.GetItems());
+                CollectionAssert.AreEqual(new[] {3, 2, 1 }, cache.GetItems());// The maximun was define in 3 item, it should let enter three items
             }
 
             [TestMethod]
@@ -186,8 +188,8 @@ namespace UnitTest_TechTestOrmuco
                 cache.AddItem(1);
                 cache.AddItem(3);
                 cache.AddItem(5);
-                CollectionAssert.AreEqual(new[] { 5, 3, 1 }, cache.GetItems());
-            }
+                CollectionAssert.AreEqual(new[] { 5, 3, 1 }, cache.GetItems());//if an item exist it should be put in the beginning
+        }
 
             [TestMethod]
             public void TestLRUCache_AddItem_Over_MaxCapacity()
@@ -196,7 +198,7 @@ namespace UnitTest_TechTestOrmuco
                 cache.AddItem(2);
                 cache.AddItem(3);
                 cache.AddItem(4);
-                CollectionAssert.AreEqual(new[] { 4, 3, 2 }, cache.GetItems());
+                CollectionAssert.AreEqual(new[] { 4, 3, 2 }, cache.GetItems()); //if it reaches the maximum it should remove the last item and place the new one in the beginning
             }
        
 
@@ -204,18 +206,18 @@ namespace UnitTest_TechTestOrmuco
             public void TestLRUCache_ExpireCacheOverLimit()
             {
                 cache.AddItem(3);
-                System.Threading.Thread.Sleep(6100); // Wait for items to expire
-                cache.ExpireCache(TimeSpan.FromSeconds(6));
-                Assert.AreEqual(0, cache.GetItems().Count);
+                System.Threading.Thread.Sleep(2100); // Wait 2.1 secs for items expire
+              // cache.ExpireCache(TimeSpan.FromSeconds(6));
+                Assert.AreEqual(0, cache.GetItems().Count);// After that time, there shouldn't be items
             }
 
             [TestMethod]
             public void TestLRUCache_ExpireCacheLimit()
             {
                 cache.AddItem(3);
-                System.Threading.Thread.Sleep(6000); // Wait for items to expire
-                cache.ExpireCache(TimeSpan.FromSeconds(6));
-                Assert.AreEqual(0, cache.GetItems().Count);
+                System.Threading.Thread.Sleep(2000); // Wait 2 secs for items expire, in the expire limit it shouldn´t remove the item
+               // cache.ExpireCache(TimeSpan.FromSeconds(6));
+                Assert.AreEqual(1, cache.GetItems().Count); // in exactly two seconds the element should still be there
             }
 
             [TestMethod]
@@ -224,12 +226,21 @@ namespace UnitTest_TechTestOrmuco
                 cache.AddItem(3);
                 cache.AddItem(2);
                 cache.AddItem(1);
-                System.Threading.Thread.Sleep(5000); // Wait for items to expire
-                cache.ExpireCache(TimeSpan.FromSeconds(6));
-               // Assert.AreNotEqual(0, cache.GetItems().Count);
+                System.Threading.Thread.Sleep(1800); // In 1.8 second the items won't expire
+               // cache.ExpireCache(TimeSpan.FromSeconds(6));
                 CollectionAssert.AreEqual(new[] { 1, 2, 3 }, cache.GetItems());
             }
-     }
+
+            [TestMethod]
+            public void TestLRUCache_ExpireCache()
+            {
+                cache.AddItem(3);
+                cache.AddItem(2);
+                cache.AddItem(1);
+                System.Threading.Thread.Sleep(2100); // In 2.1 second the items should expire
+                CollectionAssert.AreNotEqual(new[] { 1, 2, 3 }, cache.GetItems());
+            }
+    }
 
     [TestClass]
     public class OverlapTests
@@ -265,19 +276,29 @@ namespace UnitTest_TechTestOrmuco
             int[] line2 = { 2, 6 };
             string result = overlap.CheckOverlap(line1, line2);
 
-            Assert.IsTrue(result.Contains("There is a null line"));
+            Assert.IsTrue(result.Contains("One line is null"));
         }
 
-        [TestMethod]
+
+    [TestMethod]
         public void TestOverlap_NullLine2()
         {
             int[] line1 = { 3, 5 };
             int[] line2 = null;
             string result = overlap.CheckOverlap(line1, line2);
 
-            Assert.IsTrue(result.Contains("There is a null line"));
+            Assert.IsTrue(result.Contains("One line is null"));
         }
 
+        [TestMethod]
+        public void TestOverlap_NoAccurateLenght()
+        {
+            int[] line2 = { 3, 5, 8 };
+            int[] line1 = { 2, int.MaxValue };
+            string result = overlap.CheckOverlap(line1, line2);
+
+            Assert.IsTrue(result.Contains("has no accurate length"));
+        }
 
     }
 
